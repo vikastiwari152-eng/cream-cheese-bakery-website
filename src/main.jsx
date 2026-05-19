@@ -12,7 +12,7 @@ const whatsappUrl = "https://wa.me/919899777026?text=Hi%20Cream%20Cheese%20Baker
 const businessInfo = {
   name: "Cream Cheese Bakery",
   subtitle: "Premium Eggless Dessert Café",
-  phone: "078381 40193",
+  phone: "09899777026",
   address: "Shop No.54, 55, Block JG 1, Vikaspuri, New Delhi, Delhi 110018",
   hours: "Open Daily • 10 AM – 9 PM",
   rating: "5.0",
