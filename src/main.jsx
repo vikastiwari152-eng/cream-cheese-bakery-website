@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { motion } from "framer-motion";
-import { Cake, Coffee, Gift, Instagram, MapPin, MessageCircle, Search, ShoppingCart, Sparkles, Star, Truck, Settings } from "lucide-react";
+import { Cake, Coffee, Instagram, MapPin, MessageCircle, Search, ShoppingCart, Sparkles, Star, Truck, Settings } from "lucide-react";
 import "./styles.css";
 
 const swiggyUrl = "https://www.swiggy.com/menu/1341128?source=sharing";
