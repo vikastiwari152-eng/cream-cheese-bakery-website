@@ -2,8 +2,23 @@
 import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { motion } from "framer-motion";
-import { Cake, Coffee, Instagram, MapPin, MessageCircle, Search, ShoppingCart, Sparkles, Star, Truck, Settings } from "lucide-react";
-import "./styles.css";
+const Icon = ({ children, size = 20, className = "" }) => (
+  <span className={`inline-flex items-center justify-center ${className}`} style={{ fontSize: size }}>
+    {children}
+  </span>
+);
+
+const Cake = (props) => <Icon {...props}>🎂</Icon>;
+const Coffee = (props) => <Icon {...props}>☕</Icon>;
+const Instagram = (props) => <Icon {...props}>📸</Icon>;
+const MapPin = (props) => <Icon {...props}>📍</Icon>;
+const MessageCircle = (props) => <Icon {...props}>💬</Icon>;
+const Search = (props) => <Icon {...props}>🔍</Icon>;
+const ShoppingCart = (props) => <Icon {...props}>🛒</Icon>;
+const Sparkles = (props) => <Icon {...props}>✨</Icon>;
+const Star = (props) => <Icon {...props}>⭐</Icon>;
+const Truck = (props) => <Icon {...props}>🚚</Icon>;
+const Settings = (props) => <Icon {...props}>⚙️</Icon>;import "./styles.css";
 
 const swiggyUrl = "https://www.swiggy.com/menu/1341128?source=sharing";
 const zomatoUrl = "https://zomato.onelink.me/xqzv/succ5c7v";
