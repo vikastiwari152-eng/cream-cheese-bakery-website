@@ -2,12 +2,12 @@
 import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { motion } from "framer-motion";
-import { Cake, Coffee, Gift, Instagram, MapPin, MessageCircle, Search, ShoppingBag, Sparkles, Star, Truck, Settings } from "lucide-react";
+import { Cake, Coffee, Gift, Instagram, MapPin, MessageCircle, Search, ShoppingCart, Sparkles, Star, Truck, Settings } from "lucide-react";
 import "./styles.css";
 
 const swiggyUrl = "https://www.swiggy.com/menu/1341128?source=sharing";
 const zomatoUrl = "https://zomato.onelink.me/xqzv/succ5c7v";
-const whatsappUrl = "https://wa.me/917838140193?text=Hi%20Cream%20Cheese%20Bakery%2C%20I%20want%20to%20order";
+const whatsappUrl = "https://wa.me/919899777026?text=Hi%20Cream%20Cheese%20Bakery%2C%20I%20want%20to%20order";
 
 const businessInfo = {
   name: "Cream Cheese Bakery",
