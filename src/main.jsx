@@ -65,7 +65,7 @@ const products = [
 const combos = [
   { title: "Signature Lotus Indulgence", items: "Lotus Biscoff Waffle + Belgian Hot Chocolate", price: "₹289", note: "Premium dessert café experience", icon: Sparkles },
   { title: "Tiramisu Café Experience", items: "Tiramisu Pancakes + Classic Cold Coffee", price: "₹329", note: "Chef special pairing", icon: Coffee },
-  { title: "Birthday Celebration Box", items: "Bento Cake + 2 Premium Cupcakes", price: "₹549", note: "Perfect for gifting", icon: Gift },
+  { title: "Birthday Celebration Box", items: "Bento Cake + 2 Premium Cupcakes", price: "₹549", note: "Perfect for gifting", icon: Cake },
 ];
 
 const categories = ["All", "Cheesecakes", "Pancakes", "Waffles", "Brownies", "Bento Cakes", "Dessert Jars", "Pastries", "Cakes", "Seasonal"];
