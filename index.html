@@ -1,14 +1,145 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cream Cheese Bakery | Premium Eggless Dessert Café</title>
-<meta name="description" content="Cream Cheese Bakery is a premium eggless dessert café in Vikaspuri, New Delhi serving cakes, cheesecakes, waffles, pancakes, brownies and custom cakes." />
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-<div id="root"></div>
-<script type="module" src="/src/main.jsx"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ── Critical performance ───────────────────────────── -->
+    <meta name="theme-color" content="#0c0401" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Preconnect: fonts load instantly -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect: hero image CDN -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+
+    <!-- Preload hero image — eliminates LCP delay -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=900&auto=format&fit=crop&fm=webp"
+      fetchpriority="high"
+    />
+
+    <!-- Fonts: display=swap prevents FOIT, subset reduces size -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap&subset=latin"
+      rel="stylesheet"
+    />
+
+    <!-- ── Primary SEO ─────────────────────────────────────── -->
+    <title>Cream Cheese Bakery | Delhi's Best Eggless Desserts – Vikaspuri</title>
+    <meta name="description" content="Delhi's finest 100% eggless bakery. Handcrafted cakes, cheesecakes, waffles, brownies & artisan chocolates made fresh daily. Order on Swiggy, Zomato or WhatsApp from Vikaspuri, New Delhi." />
+    <meta name="keywords" content="eggless bakery Delhi, cheesecake Delhi, custom cake Vikaspuri, lotus biscoff cheesecake, best brownies Delhi, waffles pancakes Delhi, premium eggless desserts, cream cheese bakery Vikaspuri" />
+    <meta name="author" content="Cream Cheese Bakery" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://creamcheesebakery.in/" />
+
+    <!-- ── Open Graph ──────────────────────────────────────── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://creamcheesebakery.in/" />
+    <meta property="og:title"       content="Cream Cheese Bakery | Premium Eggless Desserts – Delhi" />
+    <meta property="og:description" content="100% eggless luxury desserts crafted fresh daily. Cakes, cheesecakes, waffles, brownies & artisan chocolates. Vikaspuri, New Delhi." />
+    <meta property="og:image"       content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt"    content="Premium chocolate cake by Cream Cheese Bakery Delhi" />
+    <meta property="og:locale"      content="en_IN" />
+    <meta property="og:site_name"   content="Cream Cheese Bakery" />
+
+    <!-- ── Twitter / X ────────────────────────────────────── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:site"        content="@BakeWithCC" />
+    <meta name="twitter:creator"     content="@BakeWithCC" />
+    <meta name="twitter:title"       content="Cream Cheese Bakery | Premium Eggless Desserts" />
+    <meta name="twitter:description" content="100% eggless luxury desserts. Handcrafted daily in Delhi. Cakes, cheesecakes, waffles, brownies & chocolates." />
+    <meta name="twitter:image"       content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop" />
+    <meta name="twitter:image:alt"   content="Premium chocolate cake — Cream Cheese Bakery" />
+
+    <!-- ── Local Business Schema (Rich Results) ──────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Cream Cheese Bakery",
+      "description": "Delhi's premium 100% eggless bakery. Handcrafted cakes, cheesecakes, waffles, pancakes and artisan chocolates made fresh daily.",
+      "url": "https://creamcheesebakery.in",
+      "telephone": "+917838140193",
+      "email": "hello@creamcheesebakery.in",
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200",
+      "logo": "https://creamcheesebakery.in/logo.png",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Credit Card, UPI",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No.54, 55, Block JG 1, Vikaspuri",
+        "addressLocality": "New Delhi",
+        "addressRegion": "Delhi",
+        "postalCode": "110018",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6392,
+        "longitude": 77.0789
+      },
+      "hasMap": "https://maps.google.com/?q=Cream+Cheese+Bakery+Vikaspuri+Delhi",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:00",
+        "closes": "21:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "1000",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "servesCuisine": ["Bakery", "Desserts", "Eggless"],
+      "priceRange": "₹₹",
+      "menu": "https://creamcheesebakery.in/#fullmenu",
+      "sameAs": [
+        "https://www.instagram.com/officialcreamcheesebakery/",
+        "https://x.com/BakeWithCC",
+        "https://www.swiggy.com/menu/1341128",
+        "https://zomato.onelink.me/xqzv/succ5c7v"
+      ],
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wa.me/917838140193",
+          "actionPlatform": ["http://schema.org/MobileWebPlatform"]
+        },
+        "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModeDirectDownload"]
+      }
+    }
+    </script>
+
+    <!-- ── Favicon suite ───────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c9956c'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-weight='700' font-size='13' fill='white'%3ECC%3C/text%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23c9956c'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-weight='700' font-size='80' fill='white'%3ECC%3C/text%3E%3C/svg%3E" />
+
+    <!-- ── Critical inline CSS — prevents FOUC ────────────── -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+      body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:#080301;color:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+      #root{min-height:100vh}
+      /* Skip link for keyboard nav */
+      .skip-link{position:absolute;top:-100%;left:1rem;background:#c9956c;color:#fff;padding:8px 16px;border-radius:4px;font-weight:700;font-size:.875rem;z-index:9999;text-decoration:none;transition:top .2s}
+      .skip-link:focus{top:1rem}
+    </style>
+  </head>
+  <body>
+    <!-- Skip to main content — keyboard accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
