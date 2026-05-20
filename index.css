@@ -1,0 +1,174 @@
+/* ══ CREAM CHEESE BAKERY — Global Tokens & Reset ══════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap&subset=latin');
+
+/* ── Design tokens ─────────────────────────────────────────── */
+:root {
+  --bg:        #fff8f0;
+  --dark:      #0c0401;
+  --dark2:     #180804;
+  --dark3:     #251005;
+  --cream:     #f5e6d3;
+  --cream2:    #ece0cc;
+  --gold:      #c9956c;
+  --gold2:     #e8b08a;
+  --gold3:     #d4af7a;
+  --gold4:     #f2c99a;
+  --copper:    #a87d5e;
+  --text:      #1e0c05;
+  --text2:     #6b3e26;
+  --text3:     #9a6040;
+  --border:    #e8d5be;
+  --shadow:    rgba(12,4,1,0.10);
+  --shadow2:   rgba(12,4,1,0.22);
+  --font-disp: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --radius:    20px;
+  --radius-sm: 12px;
+  --max:       1360px;
+  --ease:      cubic-bezier(0.4,0,0.2,1);
+  --ease-out:  cubic-bezier(0.16,1,0.3,1);
+  --dur:       0.32s;
+
+  /* Fluid type scale — clamp(min, preferred, max) */
+  --text-xs:   clamp(0.65rem,  1.5vw, 0.75rem);
+  --text-sm:   clamp(0.78rem,  1.8vw, 0.875rem);
+  --text-base: clamp(0.875rem, 2vw,   1rem);
+  --text-lg:   clamp(1rem,     2.2vw, 1.125rem);
+  --text-xl:   clamp(1.1rem,   2.5vw, 1.35rem);
+  --text-2xl:  clamp(1.4rem,   3vw,   1.875rem);
+  --text-3xl:  clamp(1.75rem,  4vw,   2.5rem);
+  --text-4xl:  clamp(2.2rem,   5vw,   3.5rem);
+  --text-hero: clamp(2.6rem,   5.5vw, 5rem);
+
+  /* Spacing scale */
+  --sp-1: 0.25rem; --sp-2: 0.5rem;  --sp-3: 0.75rem;
+  --sp-4: 1rem;    --sp-6: 1.5rem;  --sp-8: 2rem;
+  --sp-12: 3rem;   --sp-16: 4rem;   --sp-20: 5rem;
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgba(201,149,108,0.55);
+}
+
+/* ── Accessible Reset ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.6;
+  /* Prevent layout shift from scrollbar */
+  scrollbar-gutter: stable;
+}
+
+/* ── Images ────────────────────────────────────────────────── */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+img {
+  /* Prevent layout shift — always set width/height in HTML or contain */
+  object-fit: cover;
+}
+
+/* ── Interactive elements ──────────────────────────────────── */
+a           { text-decoration: none; color: inherit; }
+button      { cursor: pointer; font-family: var(--font-body); border: none; background: none; }
+input, select, textarea, button { font-family: inherit; font-size: inherit; }
+
+/* ── Typography ────────────────────────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-disp);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+h1 { font-size: var(--text-hero); font-weight: 700; }
+h2 { font-size: var(--text-4xl);  font-weight: 700; }
+h3 { font-size: var(--text-xl);   font-weight: 600; }
+h4 { font-size: var(--text-lg);   font-weight: 600; }
+p  { line-height: 1.7; text-wrap: pretty; }
+
+/* ── Focus — premium gold ring, visible for keyboard users ─── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Remove outline for mouse users */
+:focus:not(:focus-visible) { outline: none; }
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--copper); }
+
+/* ── Selection ─────────────────────────────────────────────── */
+::selection { background: var(--gold); color: #fff; }
+
+/* ── Reduced motion — respect user preference ──────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── High contrast mode support ───────────────────────────── */
+@media (forced-colors: active) {
+  .pc-tag, .tab-btn.active, .cat-btn.active, .nav-cta {
+    forced-color-adjust: none;
+  }
+}
+
+/* ── Print styles ──────────────────────────────────────────── */
+@media print {
+  .navbar, .float-wa, .hero-blob, .blob { display: none !important; }
+  body { background: #fff; color: #000; }
+  a::after { content: " (" attr(href) ")"; }
+}
+
+/* ── Utility classes ───────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.eyelabel {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
